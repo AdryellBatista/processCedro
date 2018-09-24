@@ -1,0 +1,57 @@
+<div class="title">
+  PERFIL DO INVESTIDOR - QUESTIONÁRIO
+</div>
+
+<div class="conteudo">
+  <form [formGroup]="objFormQuestions" (ngSubmit) = "save()">
+
+    <div class="question">
+      <p><strong>1 - </strong> Qual o seu comportamento em relação aos seus investimentos?</p>
+      <div class="radios">
+
+        <mat-radio-group formControlName="compInvestimento">
+          <mat-radio-button value="1">Preservar meu dinheiro <br>sem correr riscos</mat-radio-button> &nbsp;&nbsp;&nbsp;
+          <mat-radio-button value="2">Ganhar mais dinheiro <br>assumindo riscos moderados</mat-radio-button>&nbsp;&nbsp;&nbsp;
+          <mat-radio-button value="2">Ganhar mais dinheiro <br>assumindo riscos agressivos</mat-radio-button>&nbsp;&nbsp;&nbsp;
+
+        </mat-radio-group>
+      </div>
+
+    </div>
+    <div class="question">
+      <p><strong>2 - </strong> Por quanto tempo você deseja manter seus investimentos?</p>
+      <mat-radio-group formControlName="tempInvestimento">
+        <mat-radio-button value="1">Option 1</mat-radio-button> &nbsp;&nbsp;
+        <mat-radio-button value="2">Option 2</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="question">
+      <p><strong>3 - </strong>
+        Quanto % desse investimentos você pode precisar em um ano?
+      </p>
+      <mat-radio-group formControlName="percInvestimento">
+        <mat-radio-button value="1">Option 1</mat-radio-button> &nbsp;&nbsp;
+        <mat-radio-button value="2">Option 2</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="question">
+      <p><strong>4 - </strong> Qual a sua familiaridade com os tipos de investimentos abaixo?</p>
+      <p class="perg">  Leve em consideração o valor aplicado nos últimos 2 anos.</p>
+
+      <mat-radio-group >
+        <mat-radio-button value="1">Option 1</mat-radio-button> &nbsp;&nbsp;
+        <mat-radio-button value="2">Option 2</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <p class="perg">Gostaria de responder ao perfil investidor?</p>
+    <div class="botoes">
+      <button mat-stroked-button class="back" (click)="openNao()">Voltar</button>
+      <button type="submit" mat-button class="go">Salvar</button>
+    </div>
+
+  </form>
+
+</div>

@@ -1,0 +1,38 @@
+//@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.box{
+  background: #2f4e78;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: 'Open Sans';
+}
+
+.imgLogo{
+  padding-top: 70px;
+  text-align: center;
+}
+.imgLogo img{
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.title{
+  margin-top: 20px;
+  background-color: #8fc74b;
+  padding: 10px;
+  // border-radius: 5px;
+  color: #fff;
+}
+
+.icon{
+  font-size: 30px;
+}
+
+.conteudo{
+  color: #fff;
+  padding: 20px;
+}

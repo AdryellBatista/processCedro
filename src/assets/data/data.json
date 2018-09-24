@@ -1,0 +1,37 @@
+{
+  "questions":[
+    {
+      "number": 1,
+      "question": "Qual o seu comportamento em relação aos seus investimentos?",
+      "options":[
+        {"value": 1, "text":"Preservar meu dinheiro sem correr riscos"},
+        {"value": 2, "text":"Ganhar mais dinheiro assumindo riscos moderados"},
+        {"value": 3, "text":"Ganhar mais dinheiro assumindo riscos agressivos"}
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Por quanto tempo você deseja manter seus investimentos?",
+      "options":[
+        {"value": 1, "text":"Até 1 ano"},
+        {"value": 2, "text":"de 1 a 3 anos"},
+        {"value": 3, "text":"De 1 a 3 anos"}
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Quanto % desse investimentos você pode precisar em um ano?",
+      "options":[
+        {"value": 1, "text":"Acima de 75%"},
+        {"value": 2, "text":"De 26 a 74%"},
+        {"value": 3, "text":"Até 25%"}
+      ]
+    }
+  ],
+  "options":[
+    {"value": 1, "text":"Nunca Operei"},
+    {"value": 2, "text":"Opero pouco e não tenho familiaridade"},
+    {"value": 3, "text":"Opero eventualmente e conheço os riscos associados"},
+    {"value": 4, "text":"Opero frequentemente e conheço os riscos associados"},
+  ]
+}

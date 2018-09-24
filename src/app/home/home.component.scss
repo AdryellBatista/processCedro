@@ -1,0 +1,32 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+.title{
+  padding-top: 30px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 20px;
+  color: #8fc74b;
+}
+
+.conteudo{
+  text-align: center;
+  font-size: 14px;
+}
+
+.perg{
+  color: #aaaaaa;
+}
+
+.back{
+  background-color: rgba(#8fc74b, 0);
+  font-size: 15px;
+  color: #8fc74b;
+  border: 1px #8fc74b solid;
+  margin-left: 5px;
+}
+.go{
+  background-color: #8fc74b;
+  font-size: 15px;
+  color: #fff;
+//  border: 1px #8fc74b solid;
+  margin-left: 5px;
+}
