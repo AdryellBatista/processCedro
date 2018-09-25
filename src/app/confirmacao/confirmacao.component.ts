@@ -12,7 +12,7 @@ export class ConfirmacaoComponent implements OnInit {
     formulario = {};
     questions = [];
     options = [];
-
+    mostrar = false;
     constructor(
       private questionService: QuestionsServices,
     ) {
@@ -41,7 +41,8 @@ export class ConfirmacaoComponent implements OnInit {
 
     getOptions() {
       this.questionService.getOptions().subscribe( data=>{
-          this.options = data;
+          this.mostrar = true;
+          this.options = data;  
         }
       );
     }
