@@ -11,20 +11,16 @@ export const AppRoutes: Routes = [{
      path: 'home',
      loadChildren: './home/home.module#HomeModule'
    },
-  //  {
-  //    path: 'questionario',
-  //    loadChildren: './questionario/questionario.module#QuestionarioModule'
-  //   }
-]
-}, {
-  path: '',
-  children: [
-  // { path: '', pathMatch: 'full', redirectTo: 'home' },
-
    {
      path: 'questionario',
      loadChildren: './questionario/questionario.module#QuestionarioModule'
     }
-]
-}
+    ,
+    {
+      path: 'confirmacao',
+      loadChildren: './confirmacao/confirmacao.module#ConfirmacaoModule'
+     }
+   ]
+ }
+
 ];

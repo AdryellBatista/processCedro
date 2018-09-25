@@ -9,26 +9,29 @@ import { MatDialogModule } from '@angular/material';
 import { MatCheckboxModule } from '@angular/material';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule} from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
+
 
 // import { FlexLayoutModule } from '@angular/flex-layout';
-import { QuestionarioComponent } from './questionario.component';
-import { QuestionarioRoutes } from './questionario.routing';
+import { ConfirmacaoComponent } from './confirmacao.component';
+import { ConfirmacaoRoutes } from './confirmacao.routing';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(QuestionarioRoutes),
+    RouterModule.forChild(ConfirmacaoRoutes),
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
     MatDialogModule,
     MatCheckboxModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    MatIconModule
   ],
   declarations: [
-    QuestionarioComponent
+    ConfirmacaoComponent
   ]
 })
 
-export class QuestionarioModule {}
+export class ConfirmacaoModule {}

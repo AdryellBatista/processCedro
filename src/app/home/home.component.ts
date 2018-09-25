@@ -31,7 +31,14 @@ export class HomeComponent implements OnInit {
       this.dialogRef = this.dialog.open(ModalHomeComponent, {
         width: '450px'
       });
+      this.dialogRef.afterClosed().subscribe(result => {
+        if(result){
+          this.router.navigate(['confirmacao']);
+        }
+      });
     }
+
+
     openSim() {
       this.router.navigate(['questionario']);
 

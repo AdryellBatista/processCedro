@@ -5,51 +5,72 @@
 <div class="conteudo">
   <form [formGroup]="objFormQuestions" (ngSubmit) = "save()">
 
-    <div class="question">
-      <p><strong>1 - </strong> Qual o seu comportamento em relação aos seus investimentos?</p>
+    <div class="question" *ngFor="let item of questions">
+      <p><strong>{{item.number}} - </strong> {{item.question}}</p>
       <div class="radios">
-
-        <mat-radio-group formControlName="compInvestimento">
-          <mat-radio-button value="1">Preservar meu dinheiro <br>sem correr riscos</mat-radio-button> &nbsp;&nbsp;&nbsp;
-          <mat-radio-button value="2">Ganhar mais dinheiro <br>assumindo riscos moderados</mat-radio-button>&nbsp;&nbsp;&nbsp;
-          <mat-radio-button value="2">Ganhar mais dinheiro <br>assumindo riscos agressivos</mat-radio-button>&nbsp;&nbsp;&nbsp;
-
+        <mat-radio-group formControlName="{{item.name}}">
+          <ng-container *ngFor="let option of item.options">
+            <mat-radio-button value="{{option.value}}">{{option.text}}</mat-radio-button> <br><br>
+          </ng-container>
         </mat-radio-group>
       </div>
-
-    </div>
-    <div class="question">
-      <p><strong>2 - </strong> Por quanto tempo você deseja manter seus investimentos?</p>
-      <mat-radio-group formControlName="tempInvestimento">
-        <mat-radio-button value="1">Option 1</mat-radio-button> &nbsp;&nbsp;
-        <mat-radio-button value="2">Option 2</mat-radio-button>
-      </mat-radio-group>
     </div>
 
-    <div class="question">
-      <p><strong>3 - </strong>
-        Quanto % desse investimentos você pode precisar em um ano?
-      </p>
-      <mat-radio-group formControlName="percInvestimento">
-        <mat-radio-button value="1">Option 1</mat-radio-button> &nbsp;&nbsp;
-        <mat-radio-button value="2">Option 2</mat-radio-button>
-      </mat-radio-group>
-    </div>
-
-    <div class="question">
+    <div class="question q4" formGroupName="perg4">
       <p><strong>4 - </strong> Qual a sua familiaridade com os tipos de investimentos abaixo?</p>
       <p class="perg">  Leve em consideração o valor aplicado nos últimos 2 anos.</p>
 
-      <mat-radio-group >
-        <mat-radio-button value="1">Option 1</mat-radio-button> &nbsp;&nbsp;
-        <mat-radio-button value="2">Option 2</mat-radio-button>
-      </mat-radio-group>
+      <div class="perg4Item">
+        <p>Títulos de renda fixa ou tesouro direto</p>
+        <mat-form-field >
+          <mat-select formControlName="tituloRenda" placeholder="Selecione...">
+            <mat-option *ngFor="let option of options" [value]="option.value">
+              {{option.text}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="perg4Item">
+        <p>Fundos de Investimento</p>
+        <mat-form-field >
+          <mat-select formControlName="fundoInvest" placeholder="Selecione...">
+            <mat-option *ngFor="let option of options" [value]="option.value">
+              {{option.text}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="perg4Item">
+        <p>Ações a vista</p>
+        <mat-form-field >
+          <mat-select formControlName="acoesaVista" placeholder="Selecione...">
+            <mat-option *ngFor="let option of options" [value]="option.value">
+              {{option.text}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="perg4Item">
+        <p>Aluguel de ações, termos, opções e futuros</p>
+        <mat-form-field >
+          <mat-select formControlName="alugueAcoes" placeholder="Selecione...">
+            <mat-option *ngFor="let option of options" [value]="option.value">
+              {{option.text}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+
     </div>
 
-    <p class="perg">Gostaria de responder ao perfil investidor?</p>
+    <p class="perg fot">Gostaria de responder ao perfil investidor?</p>
     <div class="botoes">
-      <button mat-stroked-button class="back" (click)="openNao()">Voltar</button>
-      <button type="submit" mat-button class="go">Salvar</button>
+      <button mat-stroked-button type="button" class="back" (click)="voltar()">Voltar</button>
+      <button type="submit" mat-button class="go" [disabled]="!objFormQuestions.valid">Salvar</button>
     </div>
 
   </form>

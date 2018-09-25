@@ -1,0 +1,48 @@
+<div class="title">
+  <mat-icon style="font-size:60px">check_circle_outline</mat-icon> <br>
+  CADASTRO REALIZADO COM SUCESSO!
+</div>
+
+<div class="conteudo">
+  <div class="formulario" *ngIf="formulario != null">
+    <div class="question" *ngFor="let item of questions let i = index;">
+      <p><strong>{{item.number}} - </strong> {{item.question}}</p>
+      <ng-container *ngFor="let option of item.options">
+        <p class="perg" *ngIf="option.check">{{option.text}}</p>
+      </ng-container>
+    </div>
+
+    <div class="question q4" >
+      <p><strong>4 - </strong> Qual a sua familiaridade com os tipos de investimentos abaixo?</p>
+      <!-- <p class="perg">  Leve em consideração o valor aplicado nos últimos 2 anos.</p> -->
+
+      <div class="perg4Item">
+        <p><strong># - </strong>Títulos de renda fixa ou tesouro direto</p>
+        <p class="perg">{{options[formulario.perg4.tituloRenda-1].text}}</p>
+
+      </div>
+
+      <div class="perg4Item">
+        <p><strong># - </strong>Fundos de Investimento</p>
+        <p class="perg">{{options[formulario.perg4.fundoInvest-1].text}}</p>
+      </div>
+
+      <div class="perg4Item">
+        <p><strong># - </strong>Ações a vista</p>
+        <p class="perg">{{options[formulario.perg4.acoesaVista-1].text}}</p>
+      </div>
+
+      <div class="perg4Item">
+        <p><strong># - </strong>Aluguel de ações, termos, opções e futuros</p>
+        <p class="perg">{{options[formulario.perg4.alugueAcoes-1].text}}</p>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="nformulario" *ngIf="formulario == null">
+    <p class="perg fot">Não Respondeu ao questionário</p>
+
+  </div>
+</div>

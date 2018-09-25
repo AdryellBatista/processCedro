@@ -1,4 +1,3 @@
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 .title{
   padding-top: 30px;
   padding-bottom: 15px;
@@ -10,11 +9,15 @@
 .conteudo{
   text-align: center;
   font-size: 14px;
-  padding-bottom: 150px;
 }
 
 .perg{
   color: #aaaaaa;
+}
+
+.fot{
+  margin-top: 50px;
+
 }
 
 .back{
@@ -30,4 +33,25 @@
   color: #fff;
 //  border: 1px #8fc74b solid;
   margin-left: 5px;
+}
+
+.question{
+    // width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+
+.question p strong{
+  color: #8fc74b;
+}
+
+.radios{
+  text-align: left;
+  padding-left: 35%;
+  padding-top: 15px;
+}
+
+.nformulario{
+  padding-bottom: 200px;
 }

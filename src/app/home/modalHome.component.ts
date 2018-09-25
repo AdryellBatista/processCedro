@@ -19,7 +19,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatTable} from '@angular/mater
     </div>
   </div>
   <div mat-dialog-actions class="text-center" style="color: #8fc74b;">
-    <button mat-button [mat-dialog-close]="" tabindex="2" [disabled]="ativaOk">Ok, Entendi</button>
+    <button mat-button [mat-dialog-close]="true" tabindex="2" [disabled]="ativaOk">Ok, Entendi</button>
   </div>
 `
 })
