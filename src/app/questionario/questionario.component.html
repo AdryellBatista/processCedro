@@ -62,6 +62,13 @@
             </mat-option>
           </mat-select>
         </mat-form-field>
+        <div class="" style="width: 30%;margin-top: 30px; margin-left: 35%;">
+          <app-select-adryell
+            [options]="options"
+            [label]="'Teste Componente'"
+            (optionSelect)="teste($event)">
+          </app-select-adryell>
+        </div>
       </div>
 
 

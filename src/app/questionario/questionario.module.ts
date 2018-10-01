@@ -10,6 +10,8 @@ import { MatCheckboxModule } from '@angular/material';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule} from '@angular/material/select';
 
+import { SelectAdryellModule } from 'select-adryell';
+
 // import { FlexLayoutModule } from '@angular/flex-layout';
 import { QuestionarioComponent } from './questionario.component';
 import { QuestionarioRoutes } from './questionario.routing';
@@ -24,7 +26,8 @@ import { QuestionarioRoutes } from './questionario.routing';
     MatDialogModule,
     MatCheckboxModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    SelectAdryellModule
   ],
   declarations: [
     QuestionarioComponent

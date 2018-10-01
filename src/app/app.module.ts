@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+// import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AppRoutes } from './app.routing';
 import { HttpClientModule,
@@ -21,6 +22,7 @@ import { QuestionsServices } from './services/questions.services';
     LayoutComponent
   ],
   imports: [
+  //  CommonModule,
     BrowserModule,
     RouterModule.forRoot(AppRoutes),
     MatGridListModule,

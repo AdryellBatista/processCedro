@@ -13,7 +13,20 @@ import { Router } from '@angular/router';
 })
 
 export class QuestionarioComponent implements OnInit {
-
+  options2 = [
+    {value: 1, text: 'AAA'},
+    {value: 2, text: 'bb'},
+    {value: 3, text: 'ccc'},
+    {value: 4, text: 'dddd'},
+    {value: 5, text: 'eeee'},
+    {value: 6, text: 'fff'},
+    {value: 1, text: 'gggg'},
+    {value: 2, text: 'hhh'},
+    {value: 3, text: 'Opcao 2'},
+    {value: 4, text: 'Opcao1'},
+    {value: 5, text: 'Opcao 3'},
+    {value: 6, text: 'Opcao 4'}
+  ];
     objFormQuestions: FormGroup;
     questions = [];
     options = [];
@@ -51,10 +64,14 @@ export class QuestionarioComponent implements OnInit {
     getOptions() {
       this.questionService.getOptions().subscribe(data=> {
           this.options = data;
+          console.log('uai >> ',this.options);
+
         }
       );
     }
-
+    teste(event){
+      console.log(event);
+    }
     save() {
       this.questionService.save(this.objFormQuestions.value);
       this.router.navigate(['confirmacao']);
